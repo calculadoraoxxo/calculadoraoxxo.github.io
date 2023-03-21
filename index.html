@@ -1,0 +1,339 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <style>
+      .input-container {
+		background-color:  white;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 5px;
+      }
+	  .input-resultados {
+		background-color:  white;
+        display: flex;
+        align-items: center;
+		font-size: 22px;
+        justify-content: flex-start;
+        margin: 5px;
+      }
+	  
+	  .input-verde {
+		background-color: 6BFF4A;
+		display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 5px;
+	  }
+	  .input-amarillo {
+		background-color: FFF44A;
+		display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 5px;
+	  }
+	  .input-rojo {
+		background-color: FF6A4A;
+		display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 5px;
+	  }
+	  
+	  .label-arriba {
+		color: white;
+        background-color: #2F528F;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 0px;
+        padding: 5px;
+        width: 400px;
+        display: flex;
+        align-items: center;
+		text-align: center;
+        justify-content: center;
+      }
+	  	  
+	  .label-medio {
+        background-color: #FFFF0F;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 7px;
+        padding: 5px;
+        width: 400px;
+        display: flex;
+        align-items: center;
+		text-align: center;
+        justify-content: center;
+      }
+      
+	  .label-todo {
+        background-color: #fff;
+        border: 2px solid #000;
+        border-radius: 7px;
+        margin: 0px;
+        padding: 5px;
+        width: 420px;
+		align-items: center;
+      }
+      
+      .label-container {
+        background-color: #fff;
+        border: 1px solid #000;
+        border-radius: 5px;
+        margin: 5px;
+        padding: 5px;
+        width: 200px;
+        display: flex;
+        align-items: center;
+		text-align: center;
+        justify-content: center;
+      }
+      
+      .result-container {
+        background-color: #ff3012;
+        border: 1px solid #000;
+        border-radius: 5px;
+        margin: 5px;
+        padding: 5px;
+        width: 400px;
+		font-size: 22px;
+        display: flex;
+        align-items: flex-start;
+		text-align: flex-start;
+        justify-content: center;
+        margin-top: 20px;
+      }
+	  select {
+		width: 225px;
+		padding: 10px;
+		font-size: 16px;
+		border-radius: 5px;
+		background-color: #f2f2f2;
+	  }
+
+	  select:hover {
+		background-color: #e6e6e6;
+	  }
+
+	  select:focus {
+		box-shadow: 0 0 5px #bfbfbf;
+	  }
+	  .label-des {
+		background-color: #84D3EE;
+		border: 1px solid black;
+		border-radius: 5px;
+		padding: 10px;
+		width: auto;
+		margin: 5px;
+		font-size: 12px;
+		font-weight: bold;
+		text-align: center;
+		margin-left: 10px;
+		align-items: flex-end;
+	  }
+	  .select-container {
+		display: flex;
+		align-items: center;
+	  }
+    </style>
+  </head>
+  <body style="background-color:#fff;">
+  <div class="label-todo">
+    <div class="label-arriba">
+        <label for="text2">GANA MÁS</label>
+    </div>
+	<div class="label-arriba">
+        <label for="text1">Con esta calculadora podrás determinar el monto de Incentivos Variables que quieres ganar al mes.<br>Aplica únicamente para esquema Empleado Propio</label>
+    </div>
+	<div class="select-container">
+		<select id="opcion" onchange="resul();">
+			<option value="op1">Plaza Mexicali Poniente</option>
+			<option value="op2">Plaza Mexicali Oriente</option>
+			<option value="op3">Plaza Hermosillo Sur</option>
+			<option value="op4">Plaza Hermosillo Sierra</option>
+			<option value="op5">Plaza Sonora Norte</option>
+			<option value="op6">Plaza Nogales</option>
+		</select>
+		<label for="desc" class="label-des"># de tarjetas activadas/ Ventas realizadas/ Referidos</label>
+	</div>
+    <div class="input-container">
+      <div class="label-container">
+        <label for="numero1">Tarjetas Premia:</label>
+      </div>
+      <input id="numero1" onchange="resul();" value = 0 type="number" min="0">
+    </div>
+    
+    <div class="input-container">
+      <div class="label-container">
+        <label for="numero2">Tarjetas Spin:</label>
+      </div>
+      <input id="numero2" onchange="resul();" value = 0 type="number" min="0">
+    </div>
+    
+    <div class="input-container">
+      <div class="label-container">
+        <label for="numero3">Referidos:</label>
+      </div>
+      <input id="numero3" onchange="resul();" value = 0 type="number" min="0">
+    </div>
+    
+    <div class="input-container">
+      <div class="label-container">
+        <label for="numero4">Venta Sugerida TAE:</label>
+      </div>
+      <input id="numero4" onchange="resul();" value = 0 type="number" min="0">
+    </div>
+    
+    <div class="input-container">
+      <div class="label-container">
+        <label for="numero5">Venta Sugerida Generica:</label>
+      </div>
+      <input id="numero5" onchange="resul();" value = 0 type="number" min="0">
+    </div>
+    
+    <div class="result-container">
+      <div class="label-container">
+        <label id="resultado">TOTAL: 0</label>
+    <br>
+	<br>
+	</div>
+		</div>
+    <div class="label-medio">
+		<label for="text3">Recuerda que para ganar deberás estar LOGUEADO y alcanzar la META de tu tienda, consulta las bases
+</label>
+	</div>
+	<br>
+    </div>
+    <script>
+      function resul(){
+        var n1 = document.getElementById('numero1').value;
+        var n2 = document.getElementById('numero2').value;
+        var n3 = document.getElementById('numero3').value;
+        var n4 = document.getElementById('numero4').value;
+        var n5 = document.getElementById('numero5').value;
+		var op = document.getElementById("opcion");
+		var re = 1600;
+        
+		if (n1 > 10) {
+  		  document.getElementById('numero1').classList.add("input-verde");
+		  document.getElementById('numero1').classList.remove("input-amarillo");
+		  document.getElementById('numero1').classList.remove("input-container");
+		  document.getElementById('numero1').classList.remove("input-rojo");
+		} else if (n1 < 10 && n1 >= 5) {
+		  document.getElementById('numero1').classList.add("input-amarillo");
+		  document.getElementById('numero1').classList.remove("input-verde");
+		  document.getElementById('numero1').classList.remove("input-rojo");
+		  document.getElementById('numero1').classList.remove("input-container");
+		} else if (n1 == 10) {
+		  document.getElementById('numero1').classList.add("input-container");
+		  document.getElementById('numero1').classList.remove("input-amarillo");
+		  document.getElementById('numero1').classList.remove("input-verde");
+		  document.getElementById('numero1').classList.remove("input-rojo");
+		} else if (n1 < 5 && n1 >= 0){
+		  document.getElementById('numero1').classList.add("input-rojo");
+		  document.getElementById('numero1').classList.remove("input-verde");
+		  document.getElementById('numero1').classList.remove("input-amarillo");
+		  document.getElementById('numero1').classList.remove("input-container");
+		}
+		if (n2 > 10) {
+  		  document.getElementById('numero2').classList.add("input-verde");
+		  document.getElementById('numero2').classList.remove("input-amarillo");
+		  document.getElementById('numero2').classList.remove("input-container");
+		  document.getElementById('numero2').classList.remove("input-rojo");
+		} else if (n2 < 10 && n2 >= 5) {
+		  document.getElementById('numero2').classList.add("input-amarillo");
+		  document.getElementById('numero2').classList.remove("input-verde");
+		  document.getElementById('numero2').classList.remove("input-rojo");
+		  document.getElementById('numero2').classList.remove("input-container");
+		} else if (n2 == 10) {
+		  document.getElementById('numero2').classList.add("input-container");
+		  document.getElementById('numero2').classList.remove("input-amarillo");
+		  document.getElementById('numero2').classList.remove("input-verde");
+		  document.getElementById('numero2').classList.remove("input-rojo");
+		} else if (n2 < 5 && n2 >= 0){
+		  document.getElementById('numero2').classList.add("input-rojo");
+		  document.getElementById('numero2').classList.remove("input-verde");
+		  document.getElementById('numero2').classList.remove("input-amarillo");
+		  document.getElementById('numero2').classList.remove("input-container");
+		}
+		if (n3 > 10) {
+  		  document.getElementById('numero3').classList.add("input-verde");
+		  document.getElementById('numero3').classList.remove("input-amarillo");
+		  document.getElementById('numero3').classList.remove("input-container");
+		  document.getElementById('numero3').classList.remove("input-rojo");
+		} else if (n3 < 10 && n3 >= 5) {
+		  document.getElementById('numero3').classList.add("input-amarillo");
+		  document.getElementById('numero3').classList.remove("input-verde");
+		  document.getElementById('numero3').classList.remove("input-rojo");
+		  document.getElementById('numero3').classList.remove("input-container");
+		} else if (n3 == 10) {
+		  document.getElementById('numero3').classList.add("input-container");
+		  document.getElementById('numero3').classList.remove("input-amarillo");
+		  document.getElementById('numero3').classList.remove("input-verde");
+		  document.getElementById('numero3').classList.remove("input-rojo");
+		} else if (n3 < 5 && n3 >= 0){
+		  document.getElementById('numero3').classList.add("input-rojo");
+		  document.getElementById('numero3').classList.remove("input-verde");
+		  document.getElementById('numero3').classList.remove("input-amarillo");
+		  document.getElementById('numero3').classList.remove("input-container");
+		}
+		if (n4 > 10) {
+  		  document.getElementById('numero4').classList.add("input-verde");
+		  document.getElementById('numero4').classList.remove("input-amarillo");
+		  document.getElementById('numero4').classList.remove("input-container");
+		  document.getElementById('numero4').classList.remove("input-rojo");
+		} else if (n4 < 10 && n4 >= 5) {
+		  document.getElementById('numero4').classList.add("input-amarillo");
+		  document.getElementById('numero4').classList.remove("input-verde");
+		  document.getElementById('numero4').classList.remove("input-rojo");
+		  document.getElementById('numero4').classList.remove("input-container");
+		} else if (n4 == 10) {
+		  document.getElementById('numero4').classList.add("input-container");
+		  document.getElementById('numero4').classList.remove("input-amarillo");
+		  document.getElementById('numero4').classList.remove("input-verde");
+		  document.getElementById('numero4').classList.remove("input-rojo");
+		} else if (n4 < 5 && n4 >= 0){
+		  document.getElementById('numero4').classList.add("input-rojo");
+		  document.getElementById('numero4').classList.remove("input-verde");
+		  document.getElementById('numero4').classList.remove("input-amarillo");
+		  document.getElementById('numero4').classList.remove("input-container");
+		}
+		if (n5 > 10) {
+  		  document.getElementById('numero5').classList.add("input-verde");
+		  document.getElementById('numero5').classList.remove("input-amarillo");
+		  document.getElementById('numero5').classList.remove("input-container");
+		  document.getElementById('numero5').classList.remove("input-rojo");
+		} else if (n5 < 10 && n5 >= 5) {
+		  document.getElementById('numero5').classList.add("input-amarillo");
+		  document.getElementById('numero5').classList.remove("input-verde");
+		  document.getElementById('numero5').classList.remove("input-rojo");
+		  document.getElementById('numero5').classList.remove("input-container");
+		} else if (n5 == 10) {
+		  document.getElementById('numero5').classList.add("input-container");
+		  document.getElementById('numero5').classList.remove("input-amarillo");
+		  document.getElementById('numero5').classList.remove("input-verde");
+		  document.getElementById('numero5').classList.remove("input-rojo");
+		} else if (n5 < 5 && n5 >= 0){
+		  document.getElementById('numero5').classList.add("input-rojo");
+		  document.getElementById('numero5').classList.remove("input-verde");
+		  document.getElementById('numero5').classList.remove("input-amarillo");
+		  document.getElementById('numero5').classList.remove("input-container");
+		}
+        
+		if (op.value === "op" || op.value === "op2" || op.value === "op5") {
+		  var re = 1600;
+		} else if (op.value === "op3" || op.value === "op4" || op.value === "op6") {
+		  var re = 1200;
+		}
+		var rs1 = n1*3.5;
+        var rs2 = n2*3.5;
+        var rs3 = n3*re;
+        var rs4 = n4*0.5;
+        var rs5 = n5*0.9;
+		var rsl = rs1+rs2+rs3+rs4+rs5;
+        document.getElementById('resultado').innerHTML = "TOTAL: <strong>"+rsl+"</strong>"
+      }
+    </script>
+  </body>
+</html>
