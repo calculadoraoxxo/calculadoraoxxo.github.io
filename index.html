@@ -1,137 +1,26 @@
 <html>
   <head style="background-color: F39C12">
     <meta http-equiv="content-type" content="text/html; charset=windows-1252">
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <style>
-	@font-face {
-      font-family: 'Kigelia';
-      src: url('Kigelia.otf') format('opentype');
-    }
-    
-    body {
-      font-family: 'Kigelia', sans-serif;
-    }
-      .input-container {
-	  
-		background-color:  white;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        margin: 5px;
-      }
-	  .input-resultados {
-		background-color:  white;
-        display: flex;
-        align-items: center;
-		font-size: 22px;
-        justify-content: flex-start;
-        margin: 5px;
-      }
-	  .label-arriba {
-		color: white;
-        background-color: #F39912;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        margin: 0px;
-        padding: 5px;
-        width: 400px;
-        display: flex;
-        align-items: center;
-		text-align: center;
-        justify-content: center;
-      }
-	  .label-medio {
-        background-color: #FFFF0F;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        margin: 7px;
-        padding: 5px;
-        width: 400px;
-        display: flex;
-        align-items: center;
-		text-align: center;
-        justify-content: center;
-      }
-      
-	  .label-todo {
-        background-color: #fff;
-        border: 2px solid #000;
-        border-radius: 7px;
-        margin: 0px;
-        padding: 5px;
-        width: 420px;
-		align-items: center;
-      }
-      
-      .label-container {
-        border: none;
-        margin: 5px;
-        padding: 5px;
-        width: 200px;
-        display: flex;
-        align-items: center;
-		text-align: center;
-        justify-content: center;
-      }
-	  .label-container2 {
-        background-color: #fff;
-        width: 100%;
-		border: 1px solid #000;
-        display: flex;
-		margin: 0 auto;
-		left: 0;
-        align-items: center;
-		text-align: center;
-        justify-content: center;
-      }
-      
-      .result-container {
-        background-color: #ff3012;
-        border-radius: 5px;
-        margin: 5px;
-        padding: 5px;
-        width: 400px;
-		font-size: 22px;
-        display: flex;
-        align-items: flex-start;
-		text-align: flex-start;
-        justify-content: center;
-        margin-top: 20px;
-      }
-	  select {
-		width: 420px;
-		padding: 10px;
-		font-size: 16px;
-		border-radius: 5px;
-		background-color: #f2f2f2;
-	  }
-
-	  select:hover {
-		background-color: #e6e6e6;
-	  }
-
-	  select:focus {
-		box-shadow: 0 0 5px #bfbfbf;
-	  }
-	  .label-des {
-		background-color: #F39C12;
-		border: 1px solid black;
-		border-radius: 5px;
-		padding: 10px;
-		width: auto;
-		margin: 5px;
-		font-size: 12px;
-		font-weight: bold;
-		text-align: center;
-		margin-left: 10px;
-		align-items: flex-end;
-	  }
-	  .select-container {
-		display: flex;
-		align-items: center;
-	  }
+      @font-face{font-family:'Kigelia';src:url('Kigelia.ttf') format('opentype')}
+      body{font-family:'Kigelia',sans-serif;background-color:#F39C12}
+      .input-container,.input-resultados{background-color:#fff;display:flex;align-items:center;justify-content:flex-start;margin:5px}
+      .input-resultados{font-size:22px}
+      .label-arriba{color:#fff;background-color:#F39912;border:1px solid #ccc;border-radius:5px;margin:0;padding:5px;width:400px;display:flex;align-items:center;text-align:center;justify-content:center}
+      .label-medio{background-color:#FFFF0F;border:1px solid #ccc;border-radius:5px;margin:7px;padding:5px;width:400px;display:flex;align-items:center;text-align:center;justify-content:center}
+      .label-todo{background-color:#fff;border:2px solid #000;border-radius:7px;margin:0;padding:5px;width:420px;align-items:center}
+      .label-container{width:100%;border:none;display:flex;align-items:center;text-align:center;justify-content:center;margin:5px;padding: 5px}
+      .label-container2{background-color:#fff;width:100%;border:1px solid #000;display:flex;align-items:center;text-align:center;bottom: 0;left: 0;position: fixed;justify-content:center;margin:0px}
+      .label-container{padding:5px;width:200px}
+      .result-container{background-color:#ff3012;border-radius:5px;margin:5px;padding:5px;width:400px;font-size:22px;display:flex;align-items:flex-start;text-align:flex-start;justify-content:center;margin-top:20px}
+      select{width:420px;padding:10px;font-size:16px;border-radius:5px;background-color:#f2f2f2}
+      select:hover{background-color:#e6e6e6}
+      select:focus{box-shadow:0 0 5px #bfbfbf}
+      .label-des{background-color:#F39C12;border:1px solid #000;border-radius:5px;padding:10px;width:auto;margin:5px;font-size:12px;font-weight:bold;text-align:center;margin-left:10px;align-items:flex-end}
+      .select-container{display:flex;align-items:center}
     </style>
-  </head>
+	</head>
   <body style="background-color: F39C12;">
   <meta charset="UTF-8">
   <div class="label-todo">
@@ -140,14 +29,14 @@
         <label for="text2">GANA MAS</label>
     </div>
 	<div class="label-arriba">
-        <label for="text1">Con esta calculadora podrÃ¡s determinar el monto de incentivos variables que quieres ganar al mes..<br>Aplica Ãšnicamente para el esquema de Empleado Propio.</label>
+        <label for="text1">Con esta calculadora podrás determinar el monto de incentivos variables que quieres ganar al mes..<br>Aplica Únicamente para el esquema de Empleado Propio.</label>
 	<br>
-	<p><a href="ayuda.html">Para ver las bases, haz clic aquÃ­Â­.</a>.</p>
+	<p><a href="ayuda.html">Para ver las bases, haz clic aquí­.</a>.</p>
     </div>
 	</div><br>
 	<div class="label-todo">
 	<div class="select-container" >
-		<select id="opcion" onchange="resul();" style="font-size: 22px;">
+		<select id="opcion" onchange="resul(); habilitarInputs();" style="font-size: 22px;">
 			<option value="op0">Selecciona una plaza</option>
 			<option value="op1">Plaza Mexicali Poniente</option>
 			<option value="op2">Plaza Mexicali Oriente</option>
@@ -161,35 +50,35 @@
       <div class="label-container">
         <label for="numero1"># de tarjetas activadas Premia:</label>
       </div>
-      <input id="numero1" value=0 onchange="resul();" type="number" min="0">
+      <input id="numero1" value=0 onchange="resul();" type="number" min="0" disabled>
     </div>
     
     <div class="input-container">
       <div class="label-container">
         <label for="numero2"># de tarjetas activadas Spin:</label>
       </div>
-      <input id="numero2" value=0 onchange="resul();" type="number" min="0">
+      <input id="numero2" value=0 onchange="resul();" type="number" min="0" disabled>
     </div>
     
     <div class="input-container">
       <div class="label-container">
         <label for="numero3"># de referidos contratados:</label>
       </div>
-      <input id="numero3" value=0 onchange="resul();" type="number" min="0">
+      <input id="numero3" value=0 onchange="resul();" type="number" min="0" disabled>
     </div>
     
     <div class="input-container">
       <div class="label-container">
         <label for="numero4"># de piezas de venta sugerida TAE:</label>
       </div>
-      <input id="numero4" value=0 onchange="resul();" type="number" min="0">
+      <input id="numero4" value=0 onchange="resul();" type="number" min="0" disabled>
     </div>
     
     <div class="input-container">
       <div class="label-container">
         <label for="numero5"># de piezas de venta sugerida Generica:</label>
       </div>
-      <input id="numero5" value=0 onchange="resul();" type="number" min="0">
+      <input id="numero5" value=0 onchange="resul();" type="number" min="0" disabled>
     </div>
 	</div>
 	<br>
@@ -221,5 +110,19 @@
 		var rsl = rs1+rs2+rs3+rs4+rs5;
         document.getElementById('resultado').innerHTML = '<span style="font-size: 20px;">TOTAL DE INCENTIVO:</span><br> <span style="font-size: 42px;"><strong>$'+rsl+'</strong></span>'
       }
+	  function habilitarInputs() {
+		var select = document.getElementById("opcion");
+		var inputs = document.getElementsByTagName("input");
+  
+		if (select.value == "op0") {
+	      for (var i = 0; i < inputs.length; i++) {
+	  	  inputs[i].disabled = true;
+  	      }
+		} else {
+	      for (var i = 0; i < inputs.length; i++) {
+		   	inputs[i].disabled = false;
+	      }
+		}
+  	}
     </script>
 </html>
