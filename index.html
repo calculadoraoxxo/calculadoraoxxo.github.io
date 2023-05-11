@@ -1,27 +1,95 @@
 <html>
-  <head style="background-color: F39C12">
+  <head style="background-color: FFF">
     <meta http-equiv="content-type" content="text/html; charset=windows-1252">
     <meta charset="UTF-8">
     <style>
       @font-face{font-family:'Kigelia';src:url('Kigelia.ttf') format('truetype')}
-      body{font-family:'Kigelia',sans-serif;background-color:#F39C12}
-      .input-container,.input-resultados{background-color:#fff;display:flex;align-items:center;justify-content:flex-start;margin:5px}
-      .input-resultados{font-size:22px}
-      .label-arriba{color:#fff;background-color:#F39912;border:1px solid #ccc;border-radius:5px;margin:0;padding:5px;width:400px;display:flex;align-items:center;text-align:center;justify-content:center}
-      .label-medio{background-color:#FFFF0F;border:1px solid #ccc;border-radius:5px;margin:7px;padding:5px;width:400px;display:flex;align-items:center;text-align:center;justify-content:center}
-      .label-todo{background-color:#fff;border:2px solid #000;border-radius:7px;margin:0;padding:5px;width:420px;align-items:center}
-      .label-container{width:100%;border:none;display:flex;align-items:center;text-align:center;justify-content:center;margin:5px;padding: 5px}
-      .label-container2{background-color:#fff;width:100%;border:1px solid #000;display:flex;align-items:center;text-align:center;bottom: 0;left: 0;position: fixed;justify-content:center;margin:0px}
-      .label-container{padding:5px;width:200px}
+      body{font-family:'Kigelia',sans-serif;background-color:#FFF}
+      .input-container{
+		background-color:#F39C12;
+		display:flex;
+		align-items:center;
+		justify-content:flex-start;
+		margin:5px;
+	  }
+      .input-resultados{
+		background-color:#F39C12;
+		display:flex;
+		align-items:center;
+		justify-content:flex-start;
+		margin:5px;
+		border: 1px solid #ccc;
+		font-size:22px;
+	  }
+      .label-arriba{
+		background-color:#FFF;
+		border:1px solid #000;
+		border-radius:5px;
+		margin:0;
+		padding:5px;
+		width:400px;
+		display:flex;
+		align-items:center;
+		text-align:center;
+		justify-content:center;
+	  }
+      .label-medio{
+		background-color:#FFFF0F;
+		border:1px solid #ccc;
+		border-radius:5px;
+		margin:7px;
+		padding:5px;
+		width:400px;
+		display:flex;
+		align-items:center;
+		text-align:center;
+		justify-content:center;
+	  }
+      .label-todo{
+		background-color:#F39C12;
+		border:2px solid #000;
+		border-radius:7px;
+		margin:0;
+		padding:5px;
+		width:420px;
+		align-items:center;
+	  }
+      .label-container{
+		width:100%;
+		border:none;
+		display:flex;
+		align-items:center;
+		text-align:center;
+		justify-content:center;
+		margin:5px;
+		padding:5px;
+	  }
+      .label-container2{
+	    background-color:#FFF;
+		width:100%;
+		border:1px solid #000;
+		display:flex;
+		align-items:center;
+		text-align:center;
+		bottom: 0;
+		left: 0;
+		position: fixed;
+		justify-content:center;
+		margin:0px;
+	  }
+      .label-container{
+		padding:5px;
+		width:200px;
+	  }
       .result-container{background-color:#ff3012;border-radius:5px;margin:5px;padding:5px;width:400px;font-size:22px;display:flex;align-items:flex-start;text-align:flex-start;justify-content:center;margin-top:20px}
       select{width:420px;padding:10px;font-size:16px;border-radius:5px;background-color:#f2f2f2}
       select:hover{background-color:#e6e6e6}
       select:focus{box-shadow:0 0 5px #bfbfbf}
-      .label-des{background-color:#F39C12;border:1px solid #000;border-radius:5px;padding:10px;width:auto;margin:5px;font-size:12px;font-weight:bold;text-align:center;margin-left:10px;align-items:flex-end}
+      .label-des{background-color:#FFF;border:1px solid #000;border-radius:5px;padding:10px;width:auto;margin:5px;font-size:12px;font-weight:bold;text-align:center;margin-left:10px;align-items:flex-end}
       .select-container{display:flex;align-items:center}
     </style>
 	</head>
-  <body style="background-color: F39C12;">
+  <body style="background-color: FFF;">
   <meta charset="UTF-8">
   <div class="label-todo">
 	  <img src="Logo.png"><br>
@@ -30,7 +98,7 @@
     </div>
 	<div class="label-arriba">
 	<br>
-	<p><a href="ayuda.html">Para ver las bases, haz clic aquí­.</a>.</p>
+	<p><a href="ayuda.html">Para ver las bases, haz clic aqu�.</a>.</p>
     </div>
 	</div><br>
 	<div class="label-todo">
@@ -47,43 +115,43 @@
 	</div><br><br>
     <div class="input-container">
       <div class="label-container">
-        <label for="numero1" >Premia:</label>
+        <label for="numero1" ><strong>Premia:</strong></label>
       </div>
       <input id="numero1" placeholder="# de tarjetas activadas" onchange="resul();" type="number" min="0" disabled>
     </div>
     
     <div class="input-container">
       <div class="label-container">
-        <label for="numero2">Spin:</label>
+        <label for="numero2"><strong>Spin:</strong></label>
       </div>
       <input id="numero2" placeholder="# de tarjetas activadas" onchange="resul();" type="number" min="0" disabled>
     </div>
     
     <div class="input-container">
       <div class="label-container">
-        <label for="numero3">Referidos:</label>
+        <label for="numero3"><strong>Referidos:</strong></label>
       </div>
       <input id="numero3" placeholder="# de ref contratados" onchange="resul();" type="number" min="0" disabled>
     </div>
     
     <div class="input-container">
       <div class="label-container">
-        <label for="numero4">Venta TAE:</label>
+        <label for="numero4"><strong>Venta TAE:</strong></label>
       </div>
       <input id="numero4" placeholder="Venta sugerida TAE" onchange="resul();" type="number" min="0" disabled>
     </div>
     
     <div class="input-container">
       <div class="label-container">
-        <label for="numero5">Venta Generica:</label>
+        <label for="numero5"><strong>Venta Generica:</strong></label>
       </div>
       <input id="numero5" placeholder="Venta sugerida generica" onchange="resul();" type="number" min="0" disabled>
     </div>
 	</div>
 	<br>
   </body>
-<div class="label-container2" style="position: fixed; bottom: 0;">
-    <label id="resultado"><span style="font-size: 20px;">TOTAL DE INCENTIVO:</span><br> <span style="font-size: 42px;">0</span></label>
+<div class="label-container2" style="position: fixed; bottom: 0; background-color:#F39C12;">
+    <label id="resultado"><span style="font-size: 18px;">TOTAL DE INCENTIVO:</span><br> <span style="font-size: 44px;"><strong>$0</strong></span></label>
 </div>
 <br><br><br><br>
     <script>
@@ -107,7 +175,7 @@
         var rs4 = n4*0.5;
         var rs5 = n5*0.9;
 		var rsl = rs1+rs2+rs3+rs4+rs5;
-        document.getElementById('resultado').innerHTML = '<span style="font-size: 20px;">TOTAL DE INCENTIVO:</span><br> <span style="font-size: 42px;"><strong>$'+rsl+'</strong></span>'
+        document.getElementById('resultado').innerHTML = '<span style="font-size: 18px;">TOTAL DE INCENTIVO:</span><br> <span style="font-size: 44px;"><strong>$'+rsl+'</strong></span>'
       }
 	  function habilitarInputs() {
 		var select = document.getElementById("opcion");
