@@ -9,14 +9,14 @@
 	  src:url('Kigelia.ttf')}
       body{font-family:'Kigelia',sans-serif;}
       .input-container{
-		background-color:#F39C12;
+		background-color:#fff;
 		display:flex;
 		align-items:center;
 		justify-content:flex-start;
 		margin:5px;
 	  }
       .input-resultados{
-		background-color:#F39C12;
+		background-color:#FFF;
 		display:flex;
 		align-items:center;
 		justify-content:flex-start;
@@ -26,19 +26,18 @@
 	  }
       .label-arriba{
 		background-color:#FFF;
-		border:1px solid #000;
+		border:1px solid #FF0000;
 		border-radius:5px;
 		margin:0;
 		padding:5px;
 		width:400px;
-		display:flex;
 		align-items:center;
 		text-align:center;
 		justify-content:center;
 	  }
       .label-medio{
-		background-color:#FFFF0F;
-		border:1px solid #ccc;
+		background-color:#FFF;
+		border:1px solid #FF0000;
 		border-radius:5px;
 		margin:7px;
 		padding:5px;
@@ -49,8 +48,8 @@
 		justify-content:center;
 	  }
       .label-todo{
-		background-color:#F39C12;
-		border:2px solid #000;
+		background-color:#FFF;
+		border:2px solid #FF0000;
 		border-radius:7px;
 		margin:auto;
 		padding:5px;
@@ -69,7 +68,7 @@
       .label-container2{
 	    background-color:#FFF;
 		width:100%;
-		border:1px solid #000;
+		border:2px solid #000;
 		display:flex;
 		align-items:center;
 		text-align:center;
@@ -89,6 +88,20 @@
       select:focus{box-shadow:0 0 5px #bfbfbf}
       .label-des{background-color:#FFF;border:1px solid #000;border-radius:5px;padding:10px;width:auto;margin:5px;font-size:12px;font-weight:bold;text-align:center;margin-left:10px;align-items:flex-end}
       .select-container{display:flex;align-items:center}
+	  
+	  strong {
+        font-size: 24px; /* Aumenta el tamaño de la letra */
+        font-weight: bold; /* Asegura que la letra esté en negrita */
+        text-align: left; /* Alinea el texto a la izquierda */
+      }
+
+      input {
+        width: 100%; /* Aumenta el ancho del input al 100% */
+        padding: 5px 10px; /* Aumenta el padding vertical y horizontal */
+        font-size: 24px; /* Aumenta el tamaño de la letra del input */
+        height: 50px; /* Aumenta el alto del input */
+        box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total del input */
+      }
     </style>
 	</head>
   <body style="display:block; background-color: FFF;">
@@ -99,8 +112,8 @@
         <label for="text2">GANA MAS</label>
     </div>
 	<div class="label-arriba">
-	<br>
-	<p><a href="ayuda.html">Para ver las bases, haz clic aqui.</a>.</p>
+	<p><a href="ayuda.html">Para ver las bases, haz clic aqui.</a>.</p><br>
+	<label for="text3">Solo aplica a EP y debe estar logueado y ligado.</label>
     </div>
 	</div><br><br>
 	<div class="label-todo">
@@ -152,8 +165,8 @@
 	</div>
 	<br>
   </body>
-<div class="label-container2" style="position: fixed; bottom: 0; background-color:#F39C12;">
-    <label id="resultado"><span style="font-size: 18px;">TOTAL DE INCENTIVO:</span><br> <span style="font-size: 44px;"><strong>$0</strong></span></label>
+<div class="label-container2" style="position: fixed; bottom: 0;">
+    <label id="resultado"><span style="font-size: 18px;">TOTAL DE INCENTIVO:</span><br> <span style="font-size: 44px;"><b>$0</b></span></label>
 </div>
 <br><br><br><br>
     <script>
@@ -177,7 +190,7 @@
         var rs4 = n4*0.5;
         var rs5 = n5*0.9;
 		var rsl = rs1+rs2+rs3+rs4+rs5;
-        document.getElementById('resultado').innerHTML = '<span style="font-size: 18px;">TOTAL DE INCENTIVO:</span><br> <span style="font-size: 44px;"><strong>$'+rsl+'</strong></span>'
+        document.getElementById('resultado').innerHTML = '<span style="font-size: 18px;">TOTAL DE INCENTIVO:</span><br> <span style="font-size: 44px;"><b>$'+rsl+'</b></span>'
       }
 	  function habilitarInputs() {
 		var select = document.getElementById("opcion");
