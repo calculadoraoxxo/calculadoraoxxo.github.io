@@ -90,17 +90,17 @@
       .select-container{display:flex;align-items:center}
 	  
 	  strong {
-        font-size: 24px; /* Aumenta el tamaño de la letra */
-        font-weight: bold; /* Asegura que la letra esté en negrita */
+        font-size: 24px; /* Aumenta el tamaÃ±o de la letra */
+        font-weight: bold; /* Asegura que la letra estÃ© en negrita */
         text-align: left; /* Alinea el texto a la izquierda */
       }
 
       input {
         width: 100%; /* Aumenta el ancho del input al 100% */
         padding: 5px 10px; /* Aumenta el padding vertical y horizontal */
-        font-size: 24px; /* Aumenta el tamaño de la letra del input */
+        font-size: 24px; /* Aumenta el tamaÃ±o de la letra del input */
         height: 50px; /* Aumenta el alto del input */
-        box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total del input */
+        box-sizing: border-box; /* Incluye el padding y el borde en el tamaÃ±o total del input */
       }
     </style>
 	</head>
@@ -179,10 +179,10 @@
 		var op = document.getElementById("opcion");
 		var re = 1600;
 		
-		if (op.value === "op1" || op.value === "op2" || op.value === "op5") {
-		  var re = 1600;
-		} else if (op.value === "op3" || op.value === "op4" || op.value === "op6") {
-		  var re = 1200;
+		if (op.value === "op1" || op.value === "op2" || op.value === "op5" || op.value === "op6") {
+		  var re = 800;
+		} else if (op.value === "op3" || op.value === "op4") {
+		  var re = 600;
 		}
 		var rs1 = n1*3.5;
         var rs2 = n2*3.5;
